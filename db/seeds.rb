@@ -9,7 +9,7 @@
 Product.create(
   name: 'Awesome Tshirt',
   colors: ['red', 'blue', 'orange', 'black'],
-  price: 20,
+  price_in_cents: 2000,
   stock: 50,
   sizes: ['xs', 's', 'm', 'l', 'xl', 'xxl', '3xl', '4xl'],
 )

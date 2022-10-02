@@ -1,34 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <%= @product.name %>
-</p>
+<%= link_to '< Back', products_path %>
+<div class="flex flex-col items-center mt-4 h-full">
+  <div class="text-2xl font-bold mb-6 text-gray-600">
+    <%= @product.name %>
+  </div>
 
-<p>
-  <strong>Colors:</strong>
-  <%= @product.colors %>
-</p>
+  <div class="w-full drop-shadow-lg rounded-md mb-6">
+    <%= image_tag "red-tshirt.png", class: "w-full rounded-md" %>
+  </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  <div class="flex w-full text-lg justify-between mb-4">
+    <div class="font-extrabold text-cyan-500">
+      Sizes: <%= @product.size_range %>
+    </div>
+    <div class="text-gray-500 font-semibold">
+      Stock: <%= @product.stock %>
+    </div>
+  </div>  
 
-<p>
-  <strong>Stock:</strong>
-  <%= @product.stock %>
-</p>
+  <div class="flex w-full items-center justify-between mb-6">
+    <div class="flex items-center">
+      <p class="mr-2 font-semibold text-lg text-gray-600">Colors:</p>
+      <% @product.colors.each do |color| %>
+        <div class="mr-1 rounded-full w-5 h-5 shadow-inner" style="background: <%= @product.color_mappings[color] %>;">
+        </div>
+      <% end %>
+    </div>
+    <div class="mr-2 font-semibold text-lg text-gray-600">
+      <%= @product.price %> €
+    </div>
+  </div>
 
-<p>
-  <strong>Sizes:</strong>
-  <%= @product.sizes %>
-</p>
+  <div class="w-full flex flex-start mb-6">
+    Product ID: <%= @product.id %>
+  </div>
 
-<p>
-  <strong>Id:</strong>
-  <%= @product.id %>
-</p>
+  <div class="flex items-center w-full">
+    <%= link_to 'Customize', new_custom_product_path(product_id: @product.id), class: "text-lg font-semibold text-center text-white w-full p-2 bg-cyan-500 rounded-md" %>
+  </div>
 
-<%= link_to 'Customize', new_custom_product_path(product_id: @product.id) %> |
-# <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+</div>

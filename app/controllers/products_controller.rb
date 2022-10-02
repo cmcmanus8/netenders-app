@@ -60,7 +60,11 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      if params[:id].present? 
+        @product = Product.find(params[:id]) 
+      else 
+        @product = Product.first
+      end
     end
 
     # Only allow a list of trusted parameters through.

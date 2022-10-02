@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2022_09_30_160434) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "colors", default: [], array: true
-    t.integer "price"
+    t.integer "price_in_cents"
     t.integer "stock"
     t.string "sizes", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
