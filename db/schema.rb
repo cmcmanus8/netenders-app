@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2022_09_30_160434) do
   enable_extension "plpgsql"
 
   create_table "custom_products", force: :cascade do |t|
+    t.bigint "product_id"
     t.string "right_sleeve"
     t.string "left_sleeve"
     t.string "front"
@@ -23,9 +24,9 @@ ActiveRecord::Schema.define(version: 2022_09_30_160434) do
     t.integer "quantity"
     t.string "size"
     t.string "color"
-    t.integer "product_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_custom_products_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|

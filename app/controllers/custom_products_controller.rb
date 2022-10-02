@@ -13,6 +13,7 @@ class CustomProductsController < ApplicationController
   # GET /custom_products/new
   def new
     @custom_product = CustomProduct.new
+    @product_id = params[:product_id]
   end
 
   # GET /custom_products/1/edit
