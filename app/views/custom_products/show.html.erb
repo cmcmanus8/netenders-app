@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Right sleeve:</strong>
+  <%= @custom_product.right_sleeve %>
+</p>
+
+<p>
+  <strong>Left sleeve:</strong>
+  <%= @custom_product.left_sleeve %>
+</p>
+
+<p>
+  <strong>Front:</strong>
+  <%= @custom_product.front %>
+</p>
+
+<p>
+  <strong>Back:</strong>
+  <%= @custom_product.back %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @custom_product.quantity %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @custom_product.size %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @custom_product.color %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @custom_product.product_id %>
+</p>
+
+<%= link_to 'Edit', edit_custom_product_path(@custom_product) %> |
+<%= link_to 'Back', custom_products_path %>

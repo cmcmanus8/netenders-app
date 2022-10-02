@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Custom Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Right sleeve</th>
+      <th>Left sleeve</th>
+      <th>Front</th>
+      <th>Back</th>
+      <th>Quantity</th>
+      <th>Size</th>
+      <th>Color</th>
+      <th>Product</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @custom_products.each do |custom_product| %>
+      <tr>
+        <td><%= custom_product.right_sleeve %></td>
+        <td><%= custom_product.left_sleeve %></td>
+        <td><%= custom_product.front %></td>
+        <td><%= custom_product.back %></td>
+        <td><%= custom_product.quantity %></td>
+        <td><%= custom_product.size %></td>
+        <td><%= custom_product.color %></td>
+        <td><%= custom_product.product_id %></td>
+        <td><%= link_to 'Show', custom_product %></td>
+        <td><%= link_to 'Edit', edit_custom_product_path(custom_product) %></td>
+        <td><%= link_to 'Destroy', custom_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Custom Product', new_custom_product_path %>
