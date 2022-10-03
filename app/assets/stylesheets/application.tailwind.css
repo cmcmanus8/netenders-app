@@ -11,3 +11,11 @@
 }
 
 */
+
+.field input, select {
+  @apply h-10 px-2 w-full text-sm rounded-md drop-shadow-lg;
+}
+
+.field label {
+  @apply text-xs mb-1;
+}

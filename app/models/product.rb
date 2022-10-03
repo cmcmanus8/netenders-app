@@ -6,12 +6,6 @@ class Product < ApplicationRecord
     "#{sizes[0]} - #{sizes[-1]}".upcase
   end
 
-  # def colors_available
-  #   colors.each do |color|
-  #     content_tag(:div, style: "background-color: #{color_mappings[color]}, border-radius: 50%")
-  #   end
-  # end
-#{@product.color_mappings[color]}
   def color_mappings
     {
       'red' => '#ff0000',

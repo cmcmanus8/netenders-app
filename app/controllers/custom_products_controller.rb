@@ -14,6 +14,7 @@ class CustomProductsController < ApplicationController
   def new
     @custom_product = CustomProduct.new
     @product_id = params[:product_id]
+    @product = Product.find(@product_id)
   end
 
   # GET /custom_products/1/edit
@@ -23,6 +24,8 @@ class CustomProductsController < ApplicationController
   # POST /custom_products or /custom_products.json
   def create
     @custom_product = CustomProduct.new(custom_product_params)
+    @product_id = custom_product_params[:product_id]
+    @product = Product.find(@product_id)
 
     respond_to do |format|
       if @custom_product.save
