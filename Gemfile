@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'pry-rails', :group => :development
 gem 'money-rails', '~>1.12'
 gem 'tailwindcss-rails'
+gem 'stimulus-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -55,3 +56,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "importmap-rails", "~> 1.1"
