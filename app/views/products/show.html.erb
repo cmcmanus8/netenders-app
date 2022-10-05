@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to '< Back', products_path %>
+<%= link_to '< Products', products_path %>
 <div class="flex flex-col items-center mt-4 h-full">
   <div class="text-2xl font-bold mb-6 text-gray-600">
     <%= @product.name %>
   </div>
 
-  <div class="w-full drop-shadow-lg rounded-md mb-6">
-    <%= image_tag "red-tshirt.png", class: "w-full rounded-md" %>
+  <div class="w-full mb-6">
+    <%= image_tag "tshirt.png", class: "w-full", style: "background-color: red" %>
   </div>
 
   <div class="flex w-full text-lg justify-between mb-4">
@@ -37,7 +37,7 @@
   </div>
 
   <div class="flex items-center w-full">
-    <%= link_to 'Customize', new_custom_product_path(product_id: @product.id), class: "text-lg font-semibold text-center text-white w-full p-2 bg-cyan-500 rounded-md" %>
+    <%= link_to 'Customize', new_custom_product_path(product_id: @product.id), class: "text-lg font-semibold text-center text-white w-full p-2 bg-cyan-500 rounded-md visited:text-white" %>
   </div>
 
 </div>

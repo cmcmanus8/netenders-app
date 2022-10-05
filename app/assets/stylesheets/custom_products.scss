@@ -1,3 +1,36 @@
 // Place all the styles related to the custom_products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.drawing-area{
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  z-index: 10;
+  width: 40%;
+  height: 50%;
+}
+
+.canvas-container{
+  width: 40%;
+  height: 50%;
+  position: relative; 
+  user-select: none;
+}
+
+#tshirt-div{
+  width: 100%;
+  position: relative;
+  background-color: red;
+}
+
+#canvas{
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  left: 0px; 
+  top: 0px; 
+  user-select: none; 
+  cursor: default;
+}

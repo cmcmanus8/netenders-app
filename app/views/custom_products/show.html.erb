@@ -2,22 +2,22 @@
 
 <p>
   <strong>Right sleeve:</strong>
-  <%= @custom_product.right_sleeve %>
+  <%= @custom_product.right_sleeve.presence || 'None' %>
 </p>
 
 <p>
   <strong>Left sleeve:</strong>
-  <%= @custom_product.left_sleeve %>
+  <%= @custom_product.left_sleeve.presence || 'None'  %>
 </p>
 
 <p>
   <strong>Front:</strong>
-  <%= @custom_product.front %>
+  <%= @custom_product.front.filename.presence || 'None'  %>
 </p>
 
 <p>
   <strong>Back:</strong>
-  <%= @custom_product.back %>
+  <%= @custom_product.back.presence || 'None'  %>
 </p>
 
 <p>
@@ -35,10 +35,9 @@
   <%= @custom_product.color %>
 </p>
 
-<p>
+<p class="mb-6">
   <strong>Product:</strong>
   <%= @custom_product.product_id %>
 </p>
 
-<%= link_to 'Edit', edit_custom_product_path(@custom_product) %> |
-<%= link_to 'Back', custom_products_path %>
+<%= link_to 'Back', custom_products_path, class: "cursor-pointer text-xs bg-green-500 px-2 py-1 font-semibold text-center text-white w-full rounded-md" %>

@@ -1,13 +1,12 @@
-<div class="flex flex-col w-full" data-controller="color-select">
-  <div class="flex justify-center mb-6" data-color-select-target="images">
-    <%= image_tag "red-tshirt.png", id: "red", class: "w-80 h-80 rounded-md" %>
-    <%= image_tag "black-tshirt.png", id: "black", class: "hidden w-80 h-80 rounded-md" %>
-    <%= image_tag "orange-tshirt.png", id: "orange", class: "hidden w-72 h-80 rounded-md" %>
-    <%= image_tag "blue-tshirt.png", id: "blue", class: "hidden w-80 h-80 rounded-md" %>
-
+<div class="flex flex-col w-full" data-controller="canvas">
+  <div id="tshirt-div" class="flex justify-center mb-4">
+    <%= image_tag "tshirt.png", id: "tshirt-backgroundpicture", class:"w-full" %>
+    <div id="drawing-area" class="drawing-area">
+      <canvas id="custom-product-canvas" width="145" height="220"></canvas>
+    </div>
+ 
   </div>
-  <canvas id="canvas" width="200" height="400"></canvas>
-  <div class="flex w-full justify-center">
+  <div class="flex w-full items-center">
     <%= form_with(model: custom_product) do |form| %>
       <% if custom_product.errors.any? %>
         <div id="error_explanation">
@@ -35,8 +34,8 @@
 
       <div class="flex">
         <div class="field mr-2">
-          <%= form.label :front %>
-          <%= form.text_field :front %>
+          <%= form.label :front, class: "mb-2" %>
+          <%= form.file_field :front, accept: 'image/png,image/gif,image/jpeg' %>
         </div>
 
         <div class="field">
@@ -51,9 +50,9 @@
           <%= form.select :size, @product.sizes.map { |size| size.upcase }, required: true %>
         </div>
 
-        <div class="field ml-2 w-2/3" data-color-select-target="select">
+        <div class="field ml-2 w-2/3">
           <%= form.label :color %>
-          <%= form.select :color, @product.colors.map { |color| color.humanize }, required: true %>
+          <%= form.select :color, @product.colors.map { |color| [color.humanize, @product.color_mappings[color]] }, required: true %>
         </div>
       </div>
 
@@ -68,10 +67,7 @@
         </div>
       </div>
 
-      <div class="mt-2">
-        Product ID: <%= @product_id %>
-        <%= form.hidden_field :product_id, :value => @product.id %>
-      </div>
+      <%= form.hidden_field :product_id, :value => @product.id %>
     <% end %>
   </div>
 </div>

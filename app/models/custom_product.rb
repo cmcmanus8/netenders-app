@@ -1,7 +1,11 @@
 class CustomProduct < ApplicationRecord
   belongs_to :product
 
-  COLORS = %w[Red Blue Orange Black].freeze
+  # can change to has_many for all fields
+  has_one_attached :front
+
+  # TODO: better way of validating colors 
+  COLORS = %w[#ff0000 #0000ff #ffa500 #000000].freeze
 
   validates :color, inclusion: { in: COLORS }, presence: true
   validates :size, presence: true

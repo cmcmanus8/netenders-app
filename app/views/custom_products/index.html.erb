@@ -1,39 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Custom Products</h1>
+<%= link_to 'Home', root_path, class: "cursor-pointer text-xs bg-green-500 px-2 py-1 font-semibold text-center text-white w-full rounded-md" %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Right sleeve</th>
-      <th>Left sleeve</th>
-      <th>Front</th>
-      <th>Back</th>
-      <th>Quantity</th>
-      <th>Size</th>
-      <th>Color</th>
-      <th>Product</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="text-lg text-cyan-600 font-bold mt-4">Custom Products</div>
 
-  <tbody>
-    <% @custom_products.each do |custom_product| %>
+<div class="overflow-x-scroll w-full py-4">
+  <table>
+    <thead>
       <tr>
-        <td><%= custom_product.right_sleeve %></td>
-        <td><%= custom_product.left_sleeve %></td>
-        <td><%= custom_product.front %></td>
-        <td><%= custom_product.back %></td>
-        <td><%= custom_product.quantity %></td>
-        <td><%= custom_product.size %></td>
-        <td><%= custom_product.color %></td>
-        <td><%= custom_product.product_id %></td>
-        <td><%= link_to 'Show', custom_product %></td>
-        <td><%= link_to 'Edit', edit_custom_product_path(custom_product) %></td>
-        <td><%= link_to 'Destroy', custom_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>R.sleeve</th>
+        <th>L.sleeve</th>
+        <th>Front</th>
+        <th>Back</th>
+        <th>Quantity</th>
+        <th>Size</th>
+        <th>Color</th>
+        <th>Product</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @custom_products.each do |custom_product| %>
+        <tr>
+          <td><%= custom_product.right_sleeve.presence || 'None'  %></td>
+          <td><%= custom_product.left_sleeve.presence || 'None'  %></td>
+          <td><%= custom_product.front.filename %></td>
+          <td><%= custom_product.back.presence || 'None'  %></td>
+          <td><%= custom_product.quantity %></td>
+          <td><%= custom_product.size %></td>
+          <td><%= custom_product.color %></td>
+          <td><%= custom_product.product_id %></td>
+          <td><%= link_to 'Show', custom_product %></td>
+          <td><%= link_to 'Delete', custom_product, method: :delete, data: { confirm: 'Are you sure?' }, class: "cursor-pointer text-xs font-semibold text-center text-white visited:text-white w-full p-2 bg-red-500 hover:bg-cyan-800 rounded-md" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 <br>
