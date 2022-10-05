@@ -29,6 +29,7 @@ gem 'pry-rails', :group => :development
 gem 'money-rails', '~>1.12'
 gem 'tailwindcss-rails'
 gem 'stimulus-rails'
+gem 'fabric-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

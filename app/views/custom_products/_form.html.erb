@@ -2,10 +2,11 @@
   <div class="flex justify-center mb-6" data-color-select-target="images">
     <%= image_tag "red-tshirt.png", id: "red", class: "w-80 h-80 rounded-md" %>
     <%= image_tag "black-tshirt.png", id: "black", class: "hidden w-80 h-80 rounded-md" %>
-    <%= image_tag "orange-tshirt.png", id: "orange", class: "hidden w-80 h-80 rounded-md" %>
+    <%= image_tag "orange-tshirt.png", id: "orange", class: "hidden w-72 h-80 rounded-md" %>
     <%= image_tag "blue-tshirt.png", id: "blue", class: "hidden w-80 h-80 rounded-md" %>
 
   </div>
+  <canvas id="canvas" width="200" height="400"></canvas>
   <div class="flex w-full justify-center">
     <%= form_with(model: custom_product) do |form| %>
       <% if custom_product.errors.any? %>
