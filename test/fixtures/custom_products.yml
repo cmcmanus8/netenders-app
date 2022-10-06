@@ -3,7 +3,7 @@
 one:
   right_sleeve: MyString
   left_sleeve: MyString
-  front: MyString
+  front:
   back: MyString
   quantity: 1
   size: MyString
@@ -13,9 +13,9 @@ one:
 two:
   right_sleeve: MyString
   left_sleeve: MyString
-  front: MyString
+  front:
   back: MyString
   quantity: 1
   size: MyString
   color: MyString
-  product_id: 1
+  product_id: 2

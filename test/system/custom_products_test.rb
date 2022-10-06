@@ -7,7 +7,7 @@ class CustomProductsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit custom_products_url
-    assert_selector "h1", text: "Custom Products"
+    assert_selector "div", text: "Custom Products"
   end
 
   test "creating a Custom product" do

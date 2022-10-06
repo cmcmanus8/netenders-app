@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_many :custom_products
+  has_many :custom_products, dependent: :destroy
   monetize :price_in_cents, as: "price"
 
   def size_range

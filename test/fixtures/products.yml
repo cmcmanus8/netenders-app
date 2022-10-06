@@ -2,16 +2,16 @@
 
 one:
   name: MyString
-  colors: 
+  colors: ['red', 'blue']
   price: 1
   stock: 1
-  sizes: 
+  sizes: ['xs', 's']
   id: 1
 
 two:
-  name: MyString
-  colors: 
+  name: MyString2
+  colors: ['orange', 'black']
   price: 1
   stock: 1
-  sizes: 
-  id: 1
+  sizes: ['m', 'l']
+  id: 2
