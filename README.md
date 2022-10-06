@@ -22,6 +22,9 @@ Make a web app(mobile friendly, ignore desktop) that has:
   * CUSTOM_PRODUCT.color
   * CUSTOM_PRODUCT.product_id
 
+![Screenshot 2022-10-06 125025](https://user-images.githubusercontent.com/18538027/194295118-78bf3076-652e-4533-8f40-e1362e1176fa.png)
+![Screenshot 2022-10-06 125144](https://user-images.githubusercontent.com/18538027/194295138-fd4e353d-69e2-4ad0-bc17-f10cc43e416b.png)
+
 Things you may want to cover:
 
 * Ruby version
