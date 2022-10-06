@@ -19,8 +19,6 @@ export default class extends Controller {
           imgObj.onload = null;
           let img = new fabric.Image(imgObj);
 
-          console.log(imgObj.readyState);
-
           img.scaleToHeight(220);
           img.scaleToWidth(145); 
           canvas.centerObject(img);
