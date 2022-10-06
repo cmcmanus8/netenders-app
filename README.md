@@ -22,14 +22,11 @@ Make a web app(mobile friendly, ignore desktop) that has:
   * CUSTOM_PRODUCT.color
   * CUSTOM_PRODUCT.product_id
 
-The Product Page and Customization Page are shown below. This was built with Ruby on Rails and also using StimulusJS in order to insert JS for the Customization Page features. A postgresql db was used and a Product was seeded into the db for this use but a full scaffold was generated for both Product and CustomProduct to allow further improvements to be made such as adding/editing multiple Products and CustomProducts.
+  ## A demo of the app can be found here: https://stormy-hollows-00140.herokuapp.com/
+
+This was built with Ruby on Rails and also using StimulusJS in order to insert JS for the Customization Page features. A postgresql db was used and a Product was seeded into the db for this use but a full scaffold was generated for both Product and CustomProduct to allow further improvements to be made such as adding/editing multiple Products and CustomProducts.
 
 FabricJS was used to apply an editable canvas element in the Customization Page. This was applied in the `right_sleeve` attribute for text and in the `front` attribute for user uploaded images to demonstrate.
-
-![Screenshot 2022-10-06 125025](https://user-images.githubusercontent.com/18538027/194295118-78bf3076-652e-4533-8f40-e1362e1176fa.png)
-![Screenshot 2022-10-06 125325](https://user-images.githubusercontent.com/18538027/194295401-af09401e-6dd6-45b5-b567-add646240d9f.png)
-
-## A demo of the app can be found here: https://stormy-hollows-00140.herokuapp.com/
 
 Some future improvements to make with more time:
 * Edit functionality for CustomProducts
