@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   connect() {
-    let canvas = new fabric.Canvas('custom-product-canvas');
+    let canvas = new fabric.Canvas('custom-front-canvas');
 
     document.getElementById("custom_product_color").addEventListener("change", (e) => {
       document.getElementById("tshirt-div").style.backgroundColor = e.target.value;

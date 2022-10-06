@@ -1,10 +1,12 @@
-<div class="flex flex-col w-full" data-controller="canvas">
+<div class="flex flex-col w-full" data-controller="front-image-canvas text-canvas">
   <div id="tshirt-div" class="flex justify-center mb-4">
     <%= image_tag "tshirt.png", id: "tshirt-backgroundpicture", class:"w-full" %>
-    <div id="drawing-area" class="drawing-area">
-      <canvas id="custom-product-canvas" width="145" height="220"></canvas>
+    <div id="front-drawing-area" class="front-drawing-area">
+      <canvas id="custom-front-canvas" width="145" height="220"></canvas>
     </div>
- 
+    <div id="right-drawing-area" class="right-drawing-area">
+      <canvas id="custom-text-canvas" width="130" height="77"></canvas>
+    </div>
   </div>
   <div class="flex w-full items-center">
     <%= form_with(model: custom_product) do |form| %>

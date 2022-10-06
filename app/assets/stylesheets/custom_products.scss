@@ -3,20 +3,38 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-.drawing-area{
+.front-drawing-area{
   position: absolute;
   top: 15%;
   left: 30%;
   z-index: 10;
   width: 40%;
   height: 50%;
+
+  > .canvas-container{
+    width: 40%;
+    height: 50%;
+    position: relative; 
+    user-select: none;
+  }
 }
 
-.canvas-container{
-  width: 40%;
-  height: 50%;
-  position: relative; 
-  user-select: none;
+.right-drawing-area{
+  position: absolute;
+  top: 13%;
+  left: 8%;
+  z-index: 10;
+  width: 12%;
+  height: 28%;
+  transform: rotate(16deg);
+
+  > .canvas-container {
+    transform: rotate(-90deg) translateY(-36px) translateX(-17px);
+    width: 12%;
+    height: 28%;
+    position: relative; 
+    user-select: none;
+  }
 }
 
 #tshirt-div{
