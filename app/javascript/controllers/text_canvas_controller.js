@@ -5,10 +5,10 @@ export default class extends Controller {
     let canvas = new fabric.Canvas('custom-text-canvas');
 
     document.getElementById("custom_product_right_sleeve").addEventListener("input", (e) => {
+      canvas.clear();
       let text = new fabric.Text(e.target.value, {
         fill: 'white'
       });
-
       canvas.add(text);
     }, false);
 

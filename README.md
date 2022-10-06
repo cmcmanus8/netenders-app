@@ -29,6 +29,8 @@ FabricJS was used to apply an editable canvas element in the Customization Page.
 ![Screenshot 2022-10-06 125025](https://user-images.githubusercontent.com/18538027/194295118-78bf3076-652e-4533-8f40-e1362e1176fa.png)
 ![Screenshot 2022-10-06 125325](https://user-images.githubusercontent.com/18538027/194295401-af09401e-6dd6-45b5-b567-add646240d9f.png)
 
+## A demo of the app can be found here: https://stormy-hollows-00140.herokuapp.com/
+
 Some future improvements to make with more time:
 * Edit functionality for CustomProducts
 * Enable all customizable areas to receive text and images
@@ -37,7 +39,7 @@ Some future improvements to make with more time:
 * Would look to implement more Rails Hotwire or even React to create a more dynamic editor
 * Add more tailored tests
 
-## Setup instructions
+## Setup instructions to run locally
 
 * Installing gems and dependencies
 ```bundle && yarn```
